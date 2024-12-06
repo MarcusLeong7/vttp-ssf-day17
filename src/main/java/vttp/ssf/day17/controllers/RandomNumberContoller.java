@@ -1,7 +1,5 @@
 package vttp.ssf.day17.controllers;
 
-import java.security.SecureRandom;
-import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -28,7 +26,7 @@ public class RandomNumberContoller {
     // GET /random
     // Accept: text/html
     @GetMapping
-    public ModelAndView getRandom(Model model) {
+    public ModelAndView getRandom() {
 
         ModelAndView mav = new ModelAndView("random-number");
         mav.addObject("randNum", randomSvc.getRandom(100));
